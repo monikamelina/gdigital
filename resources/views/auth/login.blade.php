@@ -6,19 +6,19 @@
         <form role="form" method="POST" action="{{ url('/login') }}" class="form" id="login-form" data-toggle="validator">
             {{ csrf_field() }}
             <h1>Login Form</h1>
-            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <input id="email" type="email" class="form-control" name="email"  placeholder="Email" value="{{ old('email') }}"  required autofocus>
+            <div class="form-group{{ $errors->has('email') ? ' has-error error' : '' }}">
+                <input id="email" type="email" class="form-control" name="email"  placeholder="Email" value="{{ old('email') }}"  required>
                 <div class="help-block with-errors"></div>
                 @if ($errors->has('email'))
-                    <span class="help-block">
+                    <span class="help-block with-errors">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span>
                 @endif
             </div>
-            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+            <div class="form-group{{ $errors->has('password') ? ' has-error error' : '' }}">
                 <input id="password" type="password" class="form-control" name="password" placeholder="Password" required>
                 @if ($errors->has('password'))
-                    <span class="help-block">
+                    <span class="help-block with-errors">
                         <strong>{{ $errors->first('password') }}</strong>
                     </span>
                 @endif

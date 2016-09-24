@@ -15,6 +15,10 @@ class SendActivationCode
 {
     use InteractsWithSockets, SerializesModels;
 
+    /**
+     * [$user description]
+     * @var [type]
+     */
     public $user;
 
     /**

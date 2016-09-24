@@ -15,8 +15,6 @@ use App\Events\ContactDelete;
 
 use App\Http\Requests\UserRequest;
 
-use App\Events\SendActivationCode;
-
 class HomeController extends Controller
 {
     /**
@@ -101,6 +99,7 @@ class HomeController extends Controller
         if($fields)
             $contact->fields()->insert($fields);
 
+        // Insert or update contact on activecampaign
         event(new ContactUpdate($contact));
 
         return response()->json(['responseText' => 'Success!', 'status'=>true], 200);
@@ -165,6 +164,7 @@ class HomeController extends Controller
             $contact->fields()->insert($fields);
         }
 
+        // Update contact on activecampaign
         event(new ContactUpdate($contact));
         
         return response()->json(['responseText' => 'Success!', 'status'=>true], 200);
@@ -183,6 +183,7 @@ class HomeController extends Controller
             return response()->json(['responseText' => 'Not Found!', 'status'=>false], 404);
        }
        
+       // Delete contact on activecampaign
        event(new ContactDelete($contact));
 
        $contact->delete();

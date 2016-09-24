@@ -8,14 +8,20 @@ use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
 
 use App\User;
+use App\Profile;
 use App\Repositories\UserRepository;
 
 class HomeController extends Controller
 {
+    /**
+     * [$user description]
+     * @var [type]
+     */
     private $user;
 
+
     function __construct(UserRepository $user){
-        // Refactor to use userRepository ...
+        // Refactor to use userRepository?? ...
         $this->user = $user;
     }
 
@@ -55,7 +61,7 @@ class HomeController extends Controller
         $user->email    = $request->get('email');
         $user->admin    = $request->get('admin');
 
-        $user->save();
+        $user->profile()->save(new Profile);
 
         flash('Successfully created user!', 'success');
         return redirect('/admin');

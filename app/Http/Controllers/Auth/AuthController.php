@@ -90,8 +90,6 @@ class AuthController extends Controller {
             event(new SendActivationCode($user)); 
         }
 
-        
-
 		if ( !$user )
             abort("Error loggin in", 500);
 

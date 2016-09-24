@@ -16,11 +16,11 @@
                     <div class="profile_img">
                         <div id="crop-avatar">
                             <!-- Current avatar -->
-                            <img class="img-responsive avatar-view" src="{{ isset(Auth::user()->profile->avatar) ? Auth::user()->profile->avatar : '/images/profile.jpg' }}" alt="Avatar" title="Change the avatar">
+                            <img class="img-responsive avatar-view" src="{{ '/images/profile.jpg' }}" alt="Avatar" title="Change the avatar">
                         </div>
                     </div>
                     <h3>{{Auth::user()->name}}</h3>
-                    <ul class="list-unstyled user_data">
+                     <ul class="list-unstyled user_data">
                         @if (!empty(Auth::user()->profile->city) || !empty(Auth::user()->profile->state) || !empty(Auth::user()->profile->country))
                             <li><i class="fa fa-map-marker user-profile-icon"></i> {{Auth::user()->profile->fullAddress}}</li>
                         @endif
