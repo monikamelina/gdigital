@@ -1,0 +1,12 @@
+table.more-info{width: 20%}
+.or-box{position: relative;border-top: 1px solid #dfdfdf;padding-top: 20px;margin-top:20px;}
+.or{color: #666666;background-color: #F7F7F7;position: absolute;text-align: center;top: -8px;width: 50px;left: 150px;}
+.btn-facebook {background-color: #3F639E;color: #fff;font-weight: bold;}
+.btn-google {background-color: #454545;color: #fff;font-weight: bold;}
+.btn-facebook:hover,  .btn-google:hover, .btn-facebook:active,.btn-google:active { text-decoration: none !important;color: #fff;font-weight: bold;}
+.row-block{margin-top: -10px;}
+.separator{margin-top: 15px;}
+#contact-datatable th{text-align: center;}
+#contact-datatable td.center{text-align: center;}
+.center{text-align: center;}
+.top-line{border-top: 1px solid #dddddd; padding-top: 20px;}
