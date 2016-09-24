@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function index(){
 
-        $users = User::all();
+        $users = User::where('id','!=', auth()->user()->id)->get();
 
         return  view('admin.index',compact('users'));
     }
