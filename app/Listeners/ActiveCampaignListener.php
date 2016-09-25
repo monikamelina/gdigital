@@ -39,10 +39,10 @@ class ActiveCampaignListener
         $list = array(
             "name"           => $id,
             "sender_name"    => config('app.name'),
-            "sender_addr1"   => env('ACTIVECAMPAIGN_ADDR'),
-            "sender_city"    => env('ACTIVECAMPAIGN_CITY'),
-            "sender_zip"     => env('ACTIVECAMPAIGN_ZIP'),
-            "sender_country" => env('ACTIVECAMPAIGN_COUNTRY'),
+            "sender_addr1"   => config('services.activecampaign.addr'),
+            "sender_city"    => config('services.activecampaign.city'),
+            "sender_zip"     => config('services.activecampaign.zip'),
+            "sender_country" => config('services.activecampaign.country'),
         );
 
         $response = $this->ac->api("list/add", $list);

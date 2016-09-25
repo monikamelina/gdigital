@@ -43,7 +43,5 @@ Route::get('/social/verify/{code}', [
 Route::group(['prefix' => 'admin',  'middleware' => ['auth','admin']], function () {
 	Route::get('/', 'Admin\HomeController@index');
 	Route::resource('users', 'Admin\HomeController', ['except' => ['index' ]]);
-	
+	Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 });
-
-Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

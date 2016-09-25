@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fe2cedd3f5d748f072c60b4289b893d1",
-    "content-hash": "b824b077f636334082c5f8b2f8760ce6",
+    "hash": "aa9237831e36c0cfd1a9af75963226bf",
+    "content-hash": "59291e8145d73a3628286a0682366987",
     "packages": [
         {
             "name": "activecampaign/api-php",

@@ -45,8 +45,12 @@ return [
         'redirect'      => env('GITHUB_URL'),
     ],
     'activecampaign' => [
-        'url' => env('ACTIVECAMPAIGN_URL'),
-        'key' => env('ACTIVECAMPAIGN_API_KEY')
+        'url'       => env('ACTIVECAMPAIGN_URL'),
+        'key'       => env('ACTIVECAMPAIGN_API_KEY'),
+        'addr'      => env('ACTIVECAMPAIGN_ADDR'),
+        'city'      => env('ACTIVECAMPAIGN_CITY'),
+        'zip'       => env('ACTIVECAMPAIGN_API_KEY'),
+        'country'   => env('ACTIVECAMPAIGN_COUNTRY'),
     ],
 
 ];
